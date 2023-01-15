@@ -4,7 +4,7 @@ import React from "react";
 class FailureCoach extends React.Component {
     constructor(props, context) {
         super(props, context);
-        this.state = {quote: 'Teste'}
+        this.state = {quote: 'Sem messagem'}
         this.generateQuote = this.generateQuote.bind(this)
         this.generateQuote();
     }
@@ -16,7 +16,12 @@ class FailureCoach extends React.Component {
         })
     }
 
+    componentDidMount() {
+        this.generateQuote();
+    }
+
     render() {
+
         return (
             <div className="failure-coach">
                 <div className="h-screen content-center bg-gray-400 grid grid-cols-1">
