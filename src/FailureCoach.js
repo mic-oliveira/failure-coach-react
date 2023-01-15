@@ -4,9 +4,9 @@ import React from "react";
 class FailureCoach extends React.Component {
     constructor(props, context) {
         super(props, context);
-        this.state = {quote: 'Sem messagem'}
-        this.generateQuote = this.generateQuote.bind(this)
-        this.generateQuote();
+        this.state = {quote: 'Sem messagem'};
+        this.generateQuote = this.generateQuote.bind(this);
+        this.callQuoteFromSpaceKey = this.callQuoteFromSpaceKey.bind(this);
     }
 
     generateQuote() {
@@ -16,7 +16,15 @@ class FailureCoach extends React.Component {
         })
     }
 
+    callQuoteFromSpaceKey(event) {
+        if (event.code !== 'Space')
+            return null;
+        this.generateQuote();
+    }
+
+
     componentDidMount() {
+        document.addEventListener('keydown', this.callQuoteFromSpaceKey)
         this.generateQuote();
     }
 
