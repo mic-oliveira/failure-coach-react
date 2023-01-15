@@ -19,12 +19,16 @@ class FailureCoach extends React.Component {
     render() {
         return (
             <div className="failure-coach">
-                <div className="flex items-center justify-center w-100 h-screen content-center bg-gray-400">
-                    <div className="w-1/2 text-center">
+                <div className="h-screen content-center bg-gray-400 grid grid-cols-1">
+                    <div className="w-2/3 place-self-center text-center">
                         <span className="text-6xl">{this.state.quote}</span>
-                        <button onClick={this.test}>dsadsa</button>
+                    </div>
+                    <div className="place-self-center m-4">
+                        Aperte espaço ou
+                        <button className="ml-2 outline outline-offset-2 outline-white rounded" onClick={this.test}>clique aqui</button>
                     </div>
                 </div>
+
             </div>
         );
     }
