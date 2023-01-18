@@ -34,7 +34,7 @@ class FailureCoach extends React.Component {
             <div className="failure-coach">
                 <div className="h-screen content-center bg-gray-400 grid grid-cols-1">
                     <div className="w-2/3 place-self-center text-center">
-                        <span className="text-6xl">{this.state.quote}</span>
+                        <span className="text-3xl md:text-6xl ">{this.state.quote}</span>
                     </div>
                     <div className="place-self-center m-4">
                         Aperte espaço ou
